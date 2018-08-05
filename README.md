@@ -5,10 +5,10 @@ Transform the content of files based on the extension.
 
 ## Usage
 
-Install using [npm](https://npmjs.com).
+Install [hoast-transform](https://npmjs.com/package/hoast-transform) using [npm](https://npmjs.com).
 
 ```
-[$ npm install hoast-transform](https://www.npmjs.com/package/hoast-transform)
+$ npm install hoast-transform
 ```
 
 ### Parameters
@@ -66,4 +66,5 @@ If you are having problems with the module please [enable debugging](https://git
 * Check if the JSTransformer associated with the extension is installed.
 
 ## License
+
 [ISC license](https://github.com/hoast/hoast-transform/blob/master/LICENSE)
