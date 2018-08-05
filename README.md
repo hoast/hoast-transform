@@ -1,9 +1,15 @@
 # Hoast-transform
 Transform the content of files based on the extension.
 
-> As the name suggest this is a [Hoast](https://github.com/hoast/hoast#readme) module. The module has been based of [metalsmith-in-place](https://github.com/metalsmith/metalsmith-in-place#readme).
+> As the name suggest this is a [hoast](https://github.com/hoast/hoast#readme) module. The module has been based of [metalsmith-in-place](https://github.com/metalsmith/metalsmith-in-place#readme).
 
 ## Usage
+
+Install using [npm](https://npmjs.com).
+
+```
+[$ npm install hoast-transform](https://www.npmjs.com/package/hoast-transform)
+```
 
 ### Parameters
 
