@@ -29,12 +29,12 @@ const getTransformer = function(extension) {
 };
 
 const validateOptions = function(options) {
-	assert(typeof(options) === 'object', 'hoast.transform: options must be of type object.');
+	assert(typeof(options) === 'object', 'hoast-transform: options must be of type object.');
 	if (options.options) {
 		assert(typeof(options.options) === 'object', 'hoast-transform: options must be of type object.');
 	}
 	if (options.patterns) {
-		assert(Array.isArray(options.patterns)  && options.patterns.length, 'hoast-transform: patterns needs must be specified and an array of strings.');
+		assert(typeof(options.patterns) === 'string' || (Array.isArray(options.patterns) && options.patterns.length > 0 && typeof(options.patterns[0] === 'string')), 'hoast-transform: patterns must be of type string or an array of strings.');
 	}
 };
 
@@ -48,8 +48,7 @@ module.exports = function(options) {
 	validateOptions(options);
 	debug(`Validated options.`);
 	options = Object.assign({
-		options: {},
-		patterns: []
+		options: {}
 	}, options);
 	
 	return async function(hoast, files) {
@@ -61,7 +60,7 @@ module.exports = function(options) {
 					
 					assert(file.content !== null, 'hoast-transform: No content found on file, read module needs to be called before this.');
 					// Has to be a string and patterns if specified.
-					if (file.content.type !== 'string' || (options.patterns.length > 0 && !nanomatch.any(file.path, options.patterns))) {
+					if (file.content.type !== 'string' || (options.patterns && !nanomatch.any(file.path, options.patterns))) {
 						debug(`File not valid for processing.`);
 						return resolve();
 					}

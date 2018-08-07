@@ -1,4 +1,5 @@
-# Hoast-transform
+# hoast-transform
+
 Transform the content of files based on the extension.
 
 > As the name suggest this is a [hoast](https://github.com/hoast/hoast#readme) module. The module has been based of [metalsmith-in-place](https://github.com/metalsmith/metalsmith-in-place#readme).
@@ -15,8 +16,8 @@ $ npm install hoast-transform
 
 * `options` **{{Object}}**: Options given to the [JSTransformer](https://github.com/jstransformers/jstransformer#readme).
 	* Default: `{}`
-* `patterns` **{Array of strings}**: An array of string which gets used to match files using glob patterns. See [nanomatch](https://github.com/micromatch/nanomatch#readme) for more details on the patterns.
-	* Default: `[]`
+* `patterns` **{Array|strings}**: A string or an array of strings which gets used to match files using glob patterns. See [nanomatch](https://github.com/micromatch/nanomatch#readme) for more details on the patterns.
+	* Required: `no`
 
 ### Example
 
