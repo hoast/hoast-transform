@@ -1,7 +1,7 @@
 {
   "author": "Ron Dekker",
   "name": "hoast-transform",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Hoast module used to transform the content of files based on the extension.",
   "license": "ISC",
   "keywords": [
