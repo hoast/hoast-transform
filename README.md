@@ -1,20 +1,8 @@
-<div align="center">
-  <a title="Version master branch" href="https://github.com/hoast/hoast-transform#readme" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/github/package-json/v/hoast/hoast-transform.svg?label=master&style=flat-square"/>
-  </a>
-  <a title="Version npm package" href="https://npmjs.com/package/hoast-transform" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/npm/v/hoast-transform.svg?label=npm&style=flat-square"/>
-  </a>
-  <a title="License agreement" href="https://github.com/hoast/hoast-transform/blob/master/LICENSE" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/github/license/hoast/hoast-transform.svg?style=flat-square"/>
-  </a>
-  <a title="Travis-ci build statis" href="https://travis-ci.org/hoast/hoast-transform" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/travis-ci/hoast/hoast-transform.svg?branch=master&style=flat-square"/>
-  </a>
-  <a title="Open issues on GitHub" href="https://github.com/hoast/hoast-transform/issues" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/github/issues/hoast/hoast-transform.svg?style=flat-square"/>
-  </a>
-</div>
+[![Version master branch](https://img.shields.io/github/package-json/v/hoast/hoast-transform.svg?label=master&style=flat-square)](https://github.com/hoast/hoast-transform#readme)
+[![Version npm package](https://img.shields.io/npm/v/hoast-transform.svg?label=npm&style=flat-square)](https://npmjs.com/package/hoast-transform)
+[![License agreement](https://img.shields.io/github/license/hoast/hoast-transform.svg?style=flat-square)](https://github.com/hoast/hoast-transform/blob/master/LICENSE)
+[![Travis-ci build status](https://img.shields.io/travis-ci/hoast/hoast-transform.svg?branch=master&style=flat-square)](https://travis-ci.org/hoast/hoast-transform)
+[![Open issues on GitHub](https://img.shields.io/github/issues/hoast/hoast-transform.svg?style=flat-square)](https://github.com/hoast/hoast-transform/issues)
 
 # hoast-transform
 
