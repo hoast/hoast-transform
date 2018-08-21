@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
   <a title="Version master branch" href="https://github.com/hoast/hoast-transform#readme" target="_blank" rel="noopener">
     <img src="https://img.shields.io/github/package-json/v/hoast/hoast-transform.svg?label=master&style=flat-square"/>
   </a>
