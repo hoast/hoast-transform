@@ -1,3 +1,21 @@
+<div style="text-align: center;">
+  <a title="Version master branch" href="https://github.com/hoast/hoast-transform#readme" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/github/package-json/v/hoast/hoast-transform.svg?label=master&style=flat-square"/>
+  </a>
+  <a title="Version npm package" href="https://npmjs.com/package/hoast-transform" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/npm/v/hoast-transform.svg?label=npm&style=flat-square"/>
+  </a>
+  <a title="License agreement" href="https://github.com/hoast/hoast-transform/blob/master/LICENSE" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/github/license/hoast/hoast-transform.svg?style=flat-square"/>
+  </a>
+  <a title="Travis-ci build statis" href="https://travis-ci.org/hoast/hoast-transform" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/travis-ci/hoast/hoast-transform.svg?branch=master&style=flat-square"/>
+  </a>
+  <a title="Open issues on GitHub" href="https://github.com/hoast/hoast-transform/issues" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/github/issues/hoast/hoast-transform.svg?style=flat-square"/>
+  </a>
+</div>
+
 # hoast-transform
 
 Transform the content of files based on the extension.
@@ -28,10 +46,8 @@ $ npm install hoast-transform
   "modules": {
     "read": {},
     "hoast-transform": {
-      "patterns": [
-	    "**/*.md"
-      ]
-	}
+      "patterns": "**/*.md"
+ 	  }
   }
 }
 ```
@@ -39,16 +55,14 @@ $ npm install hoast-transform
 **Script**
 
 ```javascript
-const Hoast = require('hoast');
+const Hoast = require(`hoast`);
 const read = Hoast.read,
-      transform = require('hoast-transform');
+      transform = require(`hoast-transform`);
 
 Hoast(__dirname)
   .use(read())
   .use(transform({
-    patterns: [
-      '**/*.md'
-    ]
+    patterns: `**/*.md`
   }))
   .process();
 ```
