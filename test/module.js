@@ -1,7 +1,7 @@
 // Dependecy modules.
 const test = require(`ava`);
 // Custom module.
-const Transform = require(`.`);
+const Transform = require(`../library`);
 
 test(`transform`, async function(t) {
 	// Create module options.
