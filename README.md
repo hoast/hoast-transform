@@ -49,10 +49,7 @@ $ npm install hoast-transform
   "modules": {
     "read": {},
     "hoast-transform": {
-      "patterns": "**/*.md",
-      "patternOptions": {
-        "globstar": true
-      }
+      "patterns": "*.md"
  	  }
   }
 }
@@ -68,10 +65,7 @@ const read = Hoast.read,
 Hoast(__dirname)
   .use(read())
   .use(transform({
-    patterns: `**/*.md`,
-    patternOptions: {
-      globstar: true
-    }
+    patterns: `*.md`
   }))
   .process();
 ```
