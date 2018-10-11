@@ -123,7 +123,7 @@ module.exports = function(options) {
 					
 					debug(`File is valid for processing.`);
 					
-					// Sperate name and extensions.
+					// Separate name and extensions.
 					const [name, ...extensions] = file.path.split(`.`);
 					const extensionsLength = extensions.length;
 					// Combine metadata and file data.
@@ -160,15 +160,11 @@ module.exports = function(options) {
 		);
 	};
 	
-	mod.before = function() {
-		debug(`Running module before.`);
-		
-		// Parse glob patterns into regular expressions.
-		if (options.patterns) {
-			this.expressions = parse(options.patterns, options.patternOptions, true);
-			debug(`Patterns parsed into expressions: ${this.expressions}.`);
-		}
-	};
+	// Parse glob patterns into regular expressions.
+	if (options.patterns) {
+		mod.expressions = parse(options.patterns, options.patternOptions, true);
+		debug(`Patterns parsed into expressions: ${mod.expressions}.`);
+	}
 	
 	return mod;
 };
