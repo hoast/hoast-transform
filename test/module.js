@@ -1,14 +1,35 @@
 // Dependency modules.
-const test = require(`ava`);
+const Hoast = require(`hoast`),
+	test = require(`ava`);
 // Custom module.
 const Transform = require(`../library`);
 
-test(`transform`, async function(t) {
-	// Create module options.
-	const options = {
-		patterns: `**/*.md`
-	};
+/**
+ * Emulates a simplified Hoast process for testing purposes.
+ * @param {Object} options Hoast options.
+ * @param {Function} mod Module function.
+ * @param {Array of objects} files The files to process and return.
+ */
+const emulateHoast = async function(options, mod, files) {
+	const hoast = Hoast(__dirname, options);
 	
+	if (mod.before) {
+		await mod.before(hoast);
+	}
+	
+	const temp = await mod(hoast, files);
+	if (temp) {
+		files = temp;
+	}
+	
+	if (mod.after) {
+		await mod.after(hoast);
+	}
+	
+	return files;
+};
+
+test(`transform`, async function(t) {
 	// Create dummy files.
 	const files = [{
 		path: `a.txt`,
@@ -40,10 +61,9 @@ test(`transform`, async function(t) {
 	}];
 	
 	// Test module.
-	const transform = Transform(options);
-	await transform({
-		options:{}
-	}, files);
+	await emulateHoast({}, Transform({
+		patterns: `**/*.md`
+	}), files);
 	// Compare files.
 	t.deepEqual(files, filesOutcome);
 });
