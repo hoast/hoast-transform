@@ -82,7 +82,3 @@ If you are having problems with the module please [enable debugging](https://git
 
 **No valid transformer found for extension <extension>.**
 * Check if the JSTransformer associated with the extension is installed.
-
-## License
-
-[ISC license](https://github.com/hoast/hoast-transform/blob/master/LICENSE)
